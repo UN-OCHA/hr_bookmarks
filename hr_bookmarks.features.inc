@@ -12,17 +12,17 @@ function hr_bookmarks_flag_default_flags() {
   // Exported flag: "Favorite Space".
   $flags['hr_favorite_space'] = array(
     'entity_type' => 'node',
-    'title' => 'Favorite Space',
+    'title' => 'Pinned Space',
     'global' => 0,
     'types' => array(
       0 => 'hr_operation',
       1 => 'hr_sector',
       2 => 'hr_space',
     ),
-    'flag_short' => 'Add to favorites',
+    'flag_short' => 'Pin this space',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Remove from favorites',
+    'unflag_short' => 'Remove this space',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',

@@ -27,7 +27,7 @@ function hr_bookmarks_block_view($delta = '') {
         $flags = flag_get_user_flags('node');
         $block['content'] = '<div class="btn-group">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-star fa-lg"></i>
+            <i class="fa fa-thumb-tack fa-lg"></i>
           </button>
           <ul class="dropdown-menu">';
         if (isset($flags['hr_favorite_space'])) {
@@ -40,11 +40,6 @@ function hr_bookmarks_block_view($delta = '') {
         if ($context_gid != NULL) {
           $block['content'] .= '<li>'.flag_create_link('hr_favorite_space', $context_gid, array('after_flagging' => FALSE)).'</li>';
         }
-        /*foreach ($tours as $key => $tour) {
-          if (!in_array($key, $manager_tours) || og_is_member('node', HR_SANDBOX_GID)) {
-            $block['content'] .= '<li>'.l(t($tour->title), $tour->steps[0]['path'], array('query' => array('tour' => $key))).'</li>';
-          }
-        }*/
         $block['content'] .= '</ul></div>';
       }
       break;
